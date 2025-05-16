@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Lokaverkefni</title>
+    <link rel="icon" type="image/svg" href="images/website-logo.svg">
+</head>
+<body>
+    <header class="topcontainer">
+    <input type="checkbox" id="hamborgari">
+    <label for="hamborgari" class="hlabel">&#9776; Menu</label>
+    <nav class="valmynd">
+      <ul>
+        <li><a href="index.html"><h5>Home</h5></a></li>
+        <li><a href="index.html#2"><h5>About</h5></a></li>
+        <li><a href="index.html#3"><h5>Services</h5></a></li>
+        <li><a href="#"><h5>Booking</h5></a></li>
+        <li><a href="index.html#5"><h5>Contact</h5></a></li>
+        <div class="logo"> <img src="images/website-logo.svg"> </div>
+      </ul>
+    </nav>
+    <div class="socials">
+      <span class="icon-facebook2"></span>
+      <span class="icon-twitter"></span>
+      <span class="icon-youtube2"></span>
+    </div>
+  </header>
+  <section class="mainsection" id="#1">
+    <img src="images/mynd1.webp">
+  </section>
+  <section class="formsection">
+    <form method="" action="#">
+        <label>Name:</label><br>
+        <input class="inputxx" type="text" name="nafn" placeholder="Your name" required><br>
+        <label>Phone:</label><br>
+        <input class="inputxx" type="tel" name="simi" placeholder="telephone 7digits" pattern="[0-9]{7}" required><br>
+        <label>Email:</label><br>
+        <input class="inputxx" type="email" name="postur" placeholder="Email" required><br>
+        <section class="innraform">
+          <div>
+              <label>Choose service</label><br>
+              <select name="service">
+              <option value="choice1">Express Wash</option>
+              <option value="choice2">Deluxe Wash</option>
+              <option value="choice3">Premium Wash</option>
+              <option value="choice3">Interior Cleaning</option>
+              <option value="choice3">Full Detail</option>
+              </select><br>
+          </div>
+          <div>
+              <label>Date:</label><br>
+              <input type="date" name="dagsetning" required><br>
+          </div>
+        </section>
+        <div class="button">
+          <input type="submit" name="submit" value="Send">
+        </div>
+    </form>
+  </section>
+  <input type="checkbox" id="chatbox">
+  <label for="chatbox" class="chatbox_label"><span class="icon-bubbles"></span></label>
+  <div class="chatbox_div">
+    <form>
+      <label>Name:</label>
+      <br>
+      <input class="chatbox_input" type="text" name="chatbox_nafn" placeholder="Your name" required>
+      <br>
+      <label>Email:</label>
+      <br>
+      <input class="chatbox_input" type="email" name="chatbox_postur" placeholder="Email Address" required>
+      <br>
+      <label>Message:</label>
+      <br>
+      <textarea class="chatbox_input-txtarea" name="chatbox_skilabod"></textarea>
+      <br>
+      <input type="submit" name="chatbox_submit" value="Send">
+    </form>
+  </div>
+</body>
+</html>
