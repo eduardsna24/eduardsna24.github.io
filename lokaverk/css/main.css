@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700|Roboto:400');
+:root{
+    /* Light theme */
+    --text: #0d0d0d;
+    --background: #f0f0f0;
+    --primary: #c5c7d3;
+    --secondary: #bdc2fa;
+    --accent: #3d56f5;
+    /* Dark theme */
+    --text-d: #f2f2f2;
+    --background-d: #0f0f0f;
+    --primary-d: #2c2e3a;
+    --secondary-d: #050a42;
+    --accent-d: #0a23c2;
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --text: var(--text-d);
+        --background: var(--background-d);
+        --primary: var(--primary-d);
+        --secondary: var(--secondary-d);
+        --accent: var(--accent-d);
+    }
+}
+
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+
+
+  background: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+
+#hamborgari{
+    display: none;
+}
+.hlabel{
+    display: none;
+    margin: 0 auto;
+    font-size: xx-large;
+}
+.hlabel:hover{
+    cursor: pointer;
+}
+
+.topcontainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 0 auto;
+    background: var(--primary);
+}
+.valmynd ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+    margin: 0 auto;
+    padding-left: 0;
+}
+.valmynd ul li{
+    list-style-type: none;
+    text-align: center;
+}
+.valmynd ul li a{
+    text-decoration: none;
+    color: var(--text);
+}
+.valmynd ul li a:hover{
+    cursor:pointer;
+}
+.logo img{
+    max-height: 80px;
+}
+.logo{
+    margin: 0 auto;
+}
+.socials{
+    font-size: xx-large;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.socials span{
+    cursor: pointer;
+}
+
+
+
+.mainsection{
+    overflow-x: hidden;
+}
+.mainsection img{
+    width: 110%;
+}
+
+
+
+.aboutsection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 80%;
+    padding-top: 50px;
+}
+.slide{
+    overflow: hidden;
+    margin: auto;
+}
+.slide div{
+    position: relative;
+    width: 400%;
+
+    animation: slider 10s infinite;
+}
+.slide div img{
+    width: 25%;
+    float: left;
+}
+@keyframes slider {
+    0%,25%{left:0}
+    30%,60%{left:-100%}
+    65%,95%{left:-200%}
+    100%{left:-300%}
+}
+.aboutsection article{
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 600px;
+}
+
+
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+td {
+	border: 1px solid var(--accent);
+	text-align: left;
+	padding: 2rem;
+}
+.headtidi {
+    font-weight: bold;
+    text-align: center;
+}
+tr:nth-child(odd) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: var(--primary);
+}
+textarea {
+	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+	max-width: 100%;
+}
+
+
+
+.booksection{
+    background: var(--secondary);
+}
+.booksection a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+}
+.booksection h3{
+    max-height: 100px;
+    animation: expand 5s infinite;
+}
+@keyframes expand {
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
+
+
+
+.bottomsection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 80%;
+}
+.contactdiv{
+    text-align: center;
+    padding-top: 100px;
+}
+.map-generator{
+    max-width: 100%; max-height: 100%; background: none;
+}
+
+
+
+#chatbox{
+    display: none;
+}
+.chatbox_label{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    font-size: xx-large;
+    background: var(--accent);
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.chatbox_label:hover{
+    background-color: var(--secondary);
+}
+.chatbox_div{
+    position: fixed;
+    right: 15px;
+    bottom: -400px;
+    width: 200px;
+    height: 300px;
+    background: var(--primary);
+    transition: all 500ms;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+#chatbox:checked ~ .chatbox_div{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    transition: all 500ms;
+}
+.chatbox_input{
+    width: 100%;
+    font-size: 1rem;
+}
+.chatbox_input-txtarea{
+    width: 100%;
+    height: 120px;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+textarea,
+select,
+input {
+	padding: 6px 12px;
+	margin-bottom: .5rem;
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 6px 12px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background:var(--accent);
+	color: var(--accent);
+	border: 0;
+	border-radius: 4px;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: var(--text);
+}
+
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	opacity: .5;
+
+	/* Set the [X] cursor while hovering a disabled link */
+	cursor: not-allowed;
+}
+
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+	background: var(--secondary);
+}
+
+
+
+.formsection{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    height: 220px;
+    margin: auto;
+    z-index: 10;
+    background: var(--primary);
+    padding: 10px;
+}
+.inputxx{
+    width: 100%;
+    font-size: 1rem;
+}
+.button{
+    width: 100%;
+    text-align: center;
+}
+.innraform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+
+@media (max-width: 768px){
+    .topcontainer{
+        display: block;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .socials{
+        padding-top: 10px;
+        max-width: 60%;
+    }
+    .valmynd ul li{
+        display: none;
+    }
+    .hlabel{
+        display: block;
+    }
+    #hamborgari:checked ~ .valmynd ul li{
+        display: block;
+    }
+    .valmynd ul{
+        display: block;
+    }
+
+    .aboutsection{
+    display: block;
+    max-width: 100%;
+    padding-top: 10px;
+    }
+    .aboutsection article{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    }
+
+    .table td{
+        width: auto;
+    }
+    tbody tr td{
+        display: block;
+    }
+
+    .bottomsection{
+        display: block;
+        max-width: 100%;
+    }
+    .contactdiv{
+        padding-top: 10px;
+    }
+    .bottomsection div {
+        margin: 0 auto;
+    }
+}
